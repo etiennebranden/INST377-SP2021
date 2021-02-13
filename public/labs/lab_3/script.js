@@ -1,10 +1,18 @@
-/* label the images, just for convenience, to visually track them */
-let i = 1;
+/*let i = 1;
 for(let li of carousel.querySelectorAll('li')) {
   li.style.position = 'relative';
   li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
   i++;
 }
+*/
+
+/* label the images, just for convenience, to visually track them */
+let li = carousel.querySelectorAll('li');
+li.forEach(element => {
+  element.style.position = 'relative';
+  element.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${element}</span>`);
+}
+);
 
 /* configuration */
 let width = 130; // image width
